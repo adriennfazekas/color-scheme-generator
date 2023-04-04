@@ -1,8 +1,9 @@
 const feed = document.getElementById("colors-grid")
+let mode = ''
 
 document.getElementById("get-btn").addEventListener("click", function() {
     const inputColor = (document.getElementById("input").value).substring(1) 
-    const mode = document.getElementById("colors").value
+    mode = document.getElementById("colors").value
     feed.innerHTML = ''
 
     fetch(`https://www.thecolorapi.com/scheme?hex=${inputColor}&mode=${mode}&count=5`,{
@@ -32,8 +33,22 @@ document.addEventListener("click", function(e) {
     if(e.target.dataset.copy) {
         copyColorName(e.target.dataset.copy)
     }
+    if(e.target.id === mode) {
+        console.log("hh")
+    }
 })
 
 function copyColorName(colorId) {
     navigator.clipboard.writeText(colorId)
+    const toastEl = document.getElementById("toast")
+    toastEl.classList.add("show")
+    setTimeout(() => {
+        toastEl.classList.remove("show")
+    }, 3000)
+}
+
+function checkmark(mode) {
+    console.log("hehe")
+    const modeEl = document.getElementById(mode)
+    modeEl.classList.toggle("check")
 }

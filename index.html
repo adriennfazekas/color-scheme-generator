@@ -12,13 +12,13 @@
                 <input class="input" id="input" type="color" />
                     
                     <select class="select-el" id="colors" name="colors" style="font-family: 'Inter';">
-                        <option class="select-option" value="monochrome">Monochrome</option>
-                        <option class="select-option" value="monochrome-dark">Monochrome-dark</option>
-                        <option class="select-option" value="monochrome-light">Monochrome-light</option>
-                        <option class="select-option" value="analogic">Analogic</option>
-                        <option class="select-option" value="complement">Complement</option>
-                        <option class="select-option" value="analogic-complement">Analogic-complement</option>
-                        <option class="select-option" value="triad">Triad</option>
+                        <option class="select-option " id="monochrome" value="monochrome">Monochrome</option>
+                        <option class="select-option " id="monochrome-dark" value="monochrome-dark">Monochrome-dark</option>
+                        <option class="select-option " id="monochrome-light" value="monochrome-light">Monochrome-light</option>
+                        <option class="select-option " id="analogic" value="analogic">Analogic</option>
+                        <option class="select-option " id="complement" value="complement">Complement</option>
+                        <option class="select-option " id="analogic-complement" value="analogic-complement">Analogic-complement</option>
+                        <option class="select-option " id="triad" value="triad">Triad</option>
                     </select>
                     
                 <button class="get-btn" id="get-btn">Get color scheme</button>
@@ -27,6 +27,7 @@
             <div class="colors-grid" id="colors-grid">
                 
             </div>
+            <div id="toast" class="toast">copy!</div>
         </div>
 
         <script src="index.js"></script>

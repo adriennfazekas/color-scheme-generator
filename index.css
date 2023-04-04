@@ -35,6 +35,13 @@ select {
     background-position: calc(100% - 8px) center;
 }
 
+.check {
+    background-image: url(images/check-solid.png);
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: calc(100% - 8px) center;
+}
+
 button {
     font-family: 'Inter';
 }
@@ -45,18 +52,11 @@ button,select  {
     background-color: white;
 }
 
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-  }
-
 .colors-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 70vh 30vh;
-    height: 80vh;
+    height: 75vh;
 }
 .color-name, .color-el {
     cursor: pointer;
@@ -66,3 +66,37 @@ button,select  {
     margin-top: 15px;
     height: 30px;
 }
+.toast {
+    visibility: hidden;
+    background-color: rgba(99, 97, 97, 0.425);
+    padding: 0.7rem;
+    margin: 10 auto;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
+}
+.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
