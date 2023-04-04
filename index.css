@@ -22,13 +22,12 @@ body {
 input { 
     border: black;
     padding: 0;
-    background-color: #D1D5DB;
     height: 2.8rem;
     width: 4rem;
 }
 
 select {
-    padding: 3px;
+    padding: 10px;
     appearance: none;
     background-image: url(/images/down-arrow.png);
     background-repeat: no-repeat;
@@ -56,5 +55,14 @@ button,select  {
 .colors-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    height: 60vh;
+    grid-template-rows: 70vh 30vh;
+    height: 80vh;
+}
+.color-name, .color-el {
+    cursor: pointer;
+}
+.color-name {
+    justify-self: center;
+    margin-top: 15px;
+    height: 30px;
 }
