@@ -4,6 +4,12 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Inter';
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .menu {
@@ -12,4 +18,43 @@ body {
     justify-content: space-around;
     gap: 15px;
     margin: 1.5em;
+}
+input { 
+    border: black;
+    padding: 0;
+    background-color: #D1D5DB;
+    height: 2.8rem;
+    width: 4rem;
+}
+
+select {
+    padding: 3px;
+    appearance: none;
+    background-image: url(/images/down-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 13px;
+    background-position: calc(100% - 8px) center;
+}
+
+button {
+    font-family: 'Inter';
+}
+
+button,select  {
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    background-color: white;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 60vh;
 }

@@ -1,26 +1,31 @@
+
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Raleway&display=swap" rel="stylesheet">
 
     </head>
 
     <body>
         <div class="container">
             <div class="menu">
-                <div class="color-el">COLOR</div>
-                <select class="select-el" id="colors" name="colors">
-                    <option class="select-option" value="monochrome">Monochrome</option>
-                    <option class="select-option" value="monochrome-dark">Monochrome-dark</option>
-                    <option class="select-option" value="monochrome-light">Monochrome-light</option>
-                    <option class="select-option" value="analogic">Analogic</option>
-                    <option class="select-option" value="complement">Complement</option>
-                    <option class="select-option" value="analogic-complement">Analogic-complement</option>
-                    <option class="select-option" value="triad">Triad</option>
-                </select>
+                <input class="input" id="input" type="color" />
+                    
+                    <select class="select-el" id="colors" name="colors" style="font-family: 'Inter';">
+                        <option class="select-option" value="monochrome">Monochrome</option>
+                        <option class="select-option" value="monochrome-dark">Monochrome-dark</option>
+                        <option class="select-option" value="monochrome-light">Monochrome-light</option>
+                        <option class="select-option" value="analogic">Analogic</option>
+                        <option class="select-option" value="complement">Complement</option>
+                        <option class="select-option" value="analogic-complement">Analogic-complement</option>
+                        <option class="select-option" value="triad">Triad</option>
+                    </select>
+                    
                 <button class="get-btn" id="get-btn">Get color scheme</button>
             </div>
-            <div>
-                5 columns 2 rows
+
+            <div class="colors-grid" id="colors-grid">
+                
             </div>
         </div>
 
