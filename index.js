@@ -34,7 +34,6 @@ document.addEventListener("click", function(e) {
         copyColorName(e.target.dataset.copy)
     }
     if(e.target.id === mode) {
-        console.log("hh")
     }
 })
 
@@ -42,6 +41,7 @@ function copyColorName(colorId) {
     navigator.clipboard.writeText(colorId)
     const toastEl = document.getElementById("toast")
     toastEl.classList.add("show")
+    toastEl.backgroundColor = colorId
     setTimeout(() => {
         toastEl.classList.remove("show")
     }, 3000)
