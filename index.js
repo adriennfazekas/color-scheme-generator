@@ -41,7 +41,7 @@ function copyColorName(colorId) {
     navigator.clipboard.writeText(colorId)
     const toastEl = document.getElementById("toast")
     toastEl.classList.add("show")
-    toastEl.backgroundColor = colorId
+    toastEl.style.backgroundColor = colorId
     setTimeout(() => {
         toastEl.classList.remove("show")
     }, 3000)
